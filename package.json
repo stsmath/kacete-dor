@@ -1,0 +1,42 @@
+{
+  "name": "kacete-dor",
+  "version": "1.0.0",
+  "description": "Repositório e Tema de wordpress criado para votação do Kacete d'Or - EA FC 25.",
+  "main": "index.php",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "esbuild": "^0.25.5",
+    "eslint": "^8.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^16.1.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.89.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:js\" \"npm run lint:watch\"",
+    "dev:css": "sass --watch --no-source-map scss/style.scss style.css --style compressed",
+    "build:css": "sass --no-source-map scss/style.scss style.css --style compressed",
+    "lint": "eslint --ext .js,.jsx . compressed",
+    "lint:fix": "eslint --fix --ext .js,.jsx . compressed",
+    "lint:watch": "eslint --ext .js,.jsx --watch . compressed",
+    "format": "prettier --write \"**/*.{js,json,scss,css,html}\"",
+    "prepare": "husky install",
+    "build:js": "esbuild scripts/main.js --bundle --minify --outfile=scripts/script.js",
+    "dev:js": "esbuild scripts/main.js --bundle --outfile=scripts/script.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stsmath/wordpress-kacete-dor.git"
+  },
+  "author": "Matheus Amaral",
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,css,html,json}": [
+      "prettier --write"
+    ]
+  }
+}

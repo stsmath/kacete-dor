@@ -6,8 +6,8 @@
   
   <?php endwhile; else: ?>
 
-  <section class="introducao-interna introducao-geral">
-    <div class="container">
+  <section class="">
+    <div class="">
       <h1>Página não encontrada.</h1>
     </div>
   </section>

@@ -146,4 +146,44 @@ function fix_svg()
         </style>';
 }
 add_action('admin_head', 'fix_svg');
+
+//Cadastra cada prêmio como menu wp
+function custom_post_type_categorias_premio()
+{
+  register_post_type('premios', array(
+    'label' => 'Prêmios',
+    'description' => 'Lista de categorias do Prêmio Kacete dOr',
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'capability_type' => 'post',
+    'map_meta_cap' => true,
+    'hierarchical' => false,
+    'rewrite' => array('slug' => 'premios', 'with_front' => true),
+    'query_var' => true,
+    'supports' => array('title', 'editor', 'page-attributes', 'post-formats'),
+
+    'labels' => array(
+      'name' => 'Prêmios',
+      'singular_name' => 'Prêmio',
+      'menu_name' => 'Prêmios',
+      'add_new' => 'Adicionar Novo prêmio',
+      'add_new_item' => 'Adicionar Novo prêmio',
+      'edit' => 'Editar',
+      'edit_item' => 'Editar prêmio',
+      'new_item' => 'Novo prêmio',
+      'view' => 'Ver prêmio',
+      'view_item' => 'Ver prêmio',
+      'search_items' => 'Procurar prêmios',
+      'not_found' => 'Nenhum prêmio Encontrado',
+      'not_found_in_trash' => 'Nenhum prêmio Encontrado no Lixo',
+    )
+  ));
+}
+add_action('init', 'custom_post_type_categorias_premio');
+
+
+
+
+
 ?>

@@ -17,8 +17,17 @@
   border: 0
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   background-color: #000000e5;
+}
+
+body {
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .remove-style-link {

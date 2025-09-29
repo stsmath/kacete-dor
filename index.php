@@ -3,6 +3,20 @@
 <?php if (have_posts()):
   while (have_posts()):
     the_post(); ?>
+
+    <article>
+			<section class="">
+				<div class="">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</section>
+
+			<section class="">
+				<div class="">
+					<?php the_content(); ?>
+				</div>
+			</section>
+		</article>
   
   <?php endwhile; else: ?>
 

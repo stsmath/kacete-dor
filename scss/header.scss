@@ -3,20 +3,30 @@ $color-secundary: #523468;
 $color-secundary-black: #422a53;
 $color-secundary-clean: #c6bfd7;
 
-
-.header_menu {
+.m-header {
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding: 30px 80px 50px;
   background: #0b0b0b;
-  border-bottom-right-radius: 60px;
-  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.header_menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  max-width: 1366px;
+  margin: 0 auto;
 
   .logo-kacete {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .titulo-blog {
       font-family: "Poppins", sans-serif;
@@ -27,7 +37,7 @@ $color-secundary-clean: #c6bfd7;
       margin-left: 10px;
     }
 
-    .slogan-premio{
+    .slogan-premio {
       font-family: "Fleur De Leah", sans-serif;
       color: $color-primary;
     }

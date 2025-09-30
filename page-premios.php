@@ -21,7 +21,7 @@ if (have_posts()):
               <a href="<?php the_permalink(); ?>">
                 <div class="">
                   <h2><?php the_title() ?></h2>
-                  <?php the_content() ?>
+                  <p><?php the_field('descricao_do_premio') ?></p>
                 </div>
                 <div class="grid-5 premio_icone"></div>
               </a>

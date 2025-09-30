@@ -70,11 +70,14 @@ if (have_posts()):
               <?php
             endwhile;
           else:
-            echo '<p>Nenhum participante foi indicado para este prêmio ainda.</p>';
+            echo '<p class="mensagem-sem-participante">Nenhum participante foi indicado para este prêmio ainda.</p>';
           endif;
           wp_reset_postdata();
           ?>
         </ul>
+        <div id="vote" class="opcoes-votacao">
+          <?php the_content() ?>
+        </div>
       </div>
     </section>
   <?php endwhile; else: endif;

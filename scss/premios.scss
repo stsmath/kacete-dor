@@ -2,9 +2,10 @@
   display: flex;
   padding: 30px 80px 50px;
   background: #0b0b0b;
-  margin-top: 5px;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
+  max-width: 1366px;
+  margin: 5px auto 0px auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 
   &-lista {
     display: flex;

@@ -1,0 +1,117 @@
+.container-premio-participantes {
+  padding: 30px 80px 50px;
+  background: #0b0b0b;
+  margin-top: 5px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+
+.container-textos {
+  margin-bottom: 70px;
+
+  &--titulo {
+    font-family: "Poppins", sans-serif;
+    color: #ecb430;
+    font-size: 30px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  &--descricao {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 26px;
+    text-align: center;
+    transition: 0.3s;
+  }
+}
+
+.participantes--lista {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.participante-item {
+  display: flex;
+  align-items: center;
+  min-width: 50%;
+  width: 100%;
+  position: relative;
+
+  .foto-participante {
+    max-width: 200px;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+
+  .nome-participante {
+    font-family: "Poppins", sans-serif;
+    color: #f8f8f8;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 190px;
+  }
+
+  .link-votacao{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #f8f8f8;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  &:after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: #ecb430;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  &:nth-child(2){
+    flex-direction: row-reverse;
+    .container-video{
+      margin: 0px 0px 0px 25px;
+    }
+  }
+}
+
+.container-video {
+  min-width: 190px;
+  margin: 0px 25px 0px 0px;
+}
+
+.videos-participantes {
+  width: 100%;
+
+  .video-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}

@@ -183,7 +183,72 @@ function custom_post_type_categorias_premio()
 add_action('init', 'custom_post_type_categorias_premio');
 
 
+//Criando página de Participantes
+function custom_post_type_participantes()
+{
+  register_post_type('participantes', array(
+    'label' => 'Participantes',
+    'description' => 'Lista de participantes do Kacete dOr',
+    'public' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'capability_type' => 'post',
+    'map_meta_cap' => true,
+    'hierarchical' => false,
+    'rewrite' => array('slug' => 'participantes', 'with_front' => true),
+    'query_var' => true,
+    'supports' => array('title', 'editor', 'thumbnail'),
 
+    'labels' => array(
+      'name' => 'Participantes',
+      'singular_name' => 'Participante',
+      'menu_name' => 'Participantes',
+      'add_new' => 'Adicionar Novo Participante',
+      'add_new_item' => 'Adicionar Novo Participante',
+      'edit' => 'Editar',
+      'edit_item' => 'Editar Participante',
+      'new_item' => 'Novo Participante',
+      'view' => 'Ver Participante',
+      'view_item' => 'Ver Participante',
+      'search_items' => 'Procurar Participantes',
+      'not_found' => 'Nenhum Participante Encontrado',
+      'not_found_in_trash' => 'Nenhum Participante no Lixo',
+    )
+  ));
+}
+add_action('init', 'custom_post_type_participantes');
+
+function custom_taxonomy_premios()
+{
+  $labels = array(
+    'name' => 'Prêmios',
+    'singular_name' => 'Prêmio',
+    'menu_name' => 'Prêmios',
+    'all_items' => 'Todos os Prêmios',
+    'edit_item' => 'Editar Prêmio',
+    'view_item' => 'Ver Prêmio',
+    'update_item' => 'Atualizar Prêmio',
+    'add_new_item' => 'Adicionar Novo Prêmio',
+    'new_item_name' => 'Novo Nome de Prêmio',
+    'search_items' => 'Procurar Prêmios',
+    'popular_items' => 'Prêmios Populares',
+    'not_found' => 'Nenhum prêmio encontrado.',
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_in_nav_menus' => true,
+    'show_ui' => true,
+    'show_tagcloud' => true,
+    'show_admin_column' => true,
+    'hierarchical' => false,
+    'rewrite' => array('slug' => 'premio'),
+    'query_var' => true
+  );
+  register_taxonomy('premios', 'participantes', $args);
+}
+add_action('init', 'custom_taxonomy_premios');
 
 
 ?>

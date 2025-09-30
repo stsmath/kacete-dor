@@ -17,7 +17,7 @@ if (have_posts()):
         <?php
         $args = array(
           'post_type' => 'participantes',
-          'posts_per_page' => -1, // pega todos
+          'posts_per_page' => -1,
           'post_status' => 'publish'
         );
         $query = new WP_Query($args);
@@ -26,9 +26,7 @@ if (have_posts()):
             $query->the_post();
             $nome_participante = get_the_title();
             ?>
-            <h2><?php echo $nome_participante?></h2>
             <?php
-            // pega todas as taxonomias "premios" ligadas a esse participante
             $premios = get_the_terms(get_the_ID(), 'premios');
 
             if ($premios && !is_wp_error($premios)) {

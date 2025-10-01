@@ -18,7 +18,8 @@ if (have_posts()):
         $args = array(
           'post_type' => 'participantes',
           'posts_per_page' => -1,
-          'post_status' => 'publish'
+          'post_status' => 'publish',
+          'order' => 'ASC'
         );
         $query = new WP_Query($args);
         if ($query->have_posts()):

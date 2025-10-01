@@ -25,19 +25,23 @@ if (have_posts()):
           while ($query->have_posts()):
             $query->the_post();
             $nome_participante = get_the_title();
-            ?>
-            <?php
             $premios = get_the_terms(get_the_ID(), 'premios');
-
-            if ($premios && !is_wp_error($premios)) {
-              echo '<ul>';
-              foreach ($premios as $premio) {
-                echo '<li>' . esc_html($premio->name) . '</li>';
+            ?>
+            <li>
+              <h2 class="premios-indicados--nome">
+                <?php echo $nome_participante ?>
+              </h2>
+              <div class="foto-participante">
+                <img src="<?php the_field('foto_participante'); ?>" alt="<?php the_title() ?>">
+              </div>
+              <?php
+              if ($premios && !is_wp_error($premios)) {
+                foreach ($premios as $premio) {
+                  echo '<p class="premios-indicados--tags"><a href=/premio/' . ($premio->name) . '>' . esc_html(str_replace('-', ' ', $premio->name)) . '</a></p>';
+                }
+              } else {
+                echo '<p>Nenhum prêmio vinculado.</p>';
               }
-              echo '</ul>';
-            } else {
-              echo '<p>Nenhum prêmio vinculado.</p>';
-            }
 
           endwhile;
           wp_reset_postdata();
@@ -45,7 +49,7 @@ if (have_posts()):
           echo '<p>Nenhum participante encontrado.</p>';
         endif;
         ?>
-
+        </li>
       </ul>
     </container>
 

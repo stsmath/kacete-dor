@@ -1,8 +1,7 @@
 .container-premio-participantes {
   padding: 30px 80px 50px;
   background: #0b0b0b;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-radius: 10px;
   max-width: 1366px;
   margin: 5px auto 0px auto;
 }
@@ -36,7 +35,7 @@
   flex-wrap: wrap;
   gap: 50px;
 
-  .mensagem-sem-participante{
+  .mensagem-sem-participante {
     font-family: "Poppins", sans-serif;
     color: #fff;
     font-size: 36px;
@@ -132,7 +131,8 @@
     .box-apm {
       border: none !important;
 
-      .apm-title-box, .ays-poll-each-answer-list {
+      .apm-title-box,
+      .ays-poll-each-answer-list {
         font-family: "Poppins", sans-serif;
         color: #f8f8f8;
         font-size: 12px;

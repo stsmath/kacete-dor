@@ -43,13 +43,13 @@ Uma coletânea de jogadas INFERNAIS, hospedadas no **YouTube**, para que quem ac
 ## 🤝 Contribuições  
 
 Sinta-se livre para abrir **issues** e enviar **pull requests**.  
-Qualquer sugestão para deixar o projeto ainda mais zoeiro é bem-vinda.  
+Qualquer sugestão para deixar o projeto ainda mais zuado NÃO é bem-vinda.  
 
 ---
 
 ## ⚡ Créditos  
 
 👨‍💻 **Desenvolvido por Matheus Amaral**  
-🎮 Inspirado pela jogatina da galera e pelos momentos mais… inesquecíveis.  
+🎮 Inspirado pelas partidas de fetas e pelos momentos mais infernais da semana.  
 
 ---

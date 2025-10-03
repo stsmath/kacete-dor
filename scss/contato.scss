@@ -4,6 +4,10 @@
   margin-top: 20px;
   font-size: 40px;
   text-align: center;
+
+  @media screen and (max-width: 638px) {
+    font-size: 20px;
+  }
 }
 
 .titulo-patrocinadores {
@@ -12,6 +16,10 @@
   margin: 20px 0px;
   font-size: 40px;
   text-align: center;
+
+  @media screen and (max-width: 638px) {
+    font-size: 20px;
+  }
 }
 
 .lista-patrocinadores {

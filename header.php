@@ -22,9 +22,5 @@
 <body <?php body_class(); ?>>
   <?php $header = get_post('6'); ?>
   <header class="m-header">
-    <?php if (!wp_is_mobile()): ?>
-      <?php include(TEMPLATEPATH . '/inc/header/header-desk.php'); ?>
-    <?php else: ?>
-      <?php include(TEMPLATEPATH . '/inc/header/header-mobile.php'); ?>
-    <?php endif; ?>
+    <?php include(TEMPLATEPATH . '/inc/header/header-desk.php'); ?>
   </header>

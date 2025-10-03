@@ -9,6 +9,10 @@ $color-secundary-clean: #c6bfd7;
   align-content: center;
   padding: 30px 80px 50px;
   background: #0b0b0b;
+
+  @media screen and (max-width: 638px) {
+    padding: 30px 30px 0px;
+  }
 }
 
 .header_menu {
@@ -44,6 +48,10 @@ $color-secundary-clean: #c6bfd7;
       width: 100%;
       max-width: 45px;
     }
+  }
+
+  @media screen and (max-width: 638px) {
+    flex-direction: column;
   }
 }
 

@@ -63,4 +63,13 @@
       }
     }
   }
+
+  @media screen and (max-width: 638px) {
+    padding: 30px 15px 50px;
+
+    &-item {
+      min-width: 50px;
+      width: 100%;
+    }
+  }
 }

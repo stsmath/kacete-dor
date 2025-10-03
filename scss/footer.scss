@@ -6,6 +6,10 @@
   text-align: center;
   margin-top: 55px;
   font-family: "Poppins", sans-serif;
+
+  @media screen and (max-width: 638px) {
+    margin-top: 15px;
+  }
 }
 
 .footer a {

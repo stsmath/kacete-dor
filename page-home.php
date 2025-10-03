@@ -35,21 +35,23 @@ if (have_posts()):
               <div class="foto-participante">
                 <img src="<?php the_field('foto_participante'); ?>" alt="<?php the_title() ?>">
               </div>
-              <?php
-              if ($premios && !is_wp_error($premios)) {
-                foreach ($premios as $premio) {
-                  echo '<p class="premios-indicados--tags"><a href=/premio/' . ($premio->name) . '>' . esc_html(str_replace('-', ' ', $premio->name)) . '</a></p>';
+              <div class="lista-indicacoes">
+                <p class="lista-indicacoes--titulo">Concorrendo à:</p>
+                <?php
+                if ($premios && !is_wp_error($premios)) {
+                  foreach ($premios as $premio) {
+                    echo '<p class="premios-indicados--tags"><a href=/premio/' . ($premio->name) . '>' . esc_html(str_replace('-', ' ', $premio->name)) . '</a></p>';
+                  }
+                } else {
+                  echo '<p>Nenhum prêmio vinculado.</p>';
                 }
-              } else {
-                echo '<p>Nenhum prêmio vinculado.</p>';
-              }
 
           endwhile;
           wp_reset_postdata();
         else:
           echo '<p>Nenhum participante encontrado.</p>';
-        endif;
-        ?>
+        endif; ?>
+          </div>
         </li>
       </ul>
     </container>
